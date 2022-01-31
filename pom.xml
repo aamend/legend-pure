@@ -26,7 +26,7 @@
     <name>Legend Pure</name>
     <groupId>org.finos.legend.pure</groupId>
     <artifactId>legend-pure</artifactId>
-    <version>1.48.1-SNAPSHOT</version>
+    <version>1.0-DELTA</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -260,7 +260,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <configuration>
-                    <failOnWarning>true</failOnWarning>
+                    <failOnWarning>false</failOnWarning>
                     <ignoreNonCompile>true</ignoreNonCompile>
                 </configuration>
                 <executions>
@@ -1015,17 +1015,17 @@
 
     <repositories>
         <repository>
-            <id>ossrh</id>
-            <name>OSSRH Public Group</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>ossrh-releases</id>
-            <name>OSSRH Public Releases Group</name>
-            <url>https://oss.sonatype.org/content/repositories/releases/</url>
+            <id>legend</id>
+            <name>local nexus</name>
+            <url>http://18.214.204.50:8081/repository/legend/</url>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>legend</id>
+            <url>http://18.214.204.50:8081/repository/legend/</url>
+        </repository>
+    </distributionManagement>
+
 </project>
